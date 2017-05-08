@@ -358,7 +358,7 @@ block content
       float: left;
       }
       }
-  body
+  
     .menu
       label(for='open')
         span.hidden-desktop
@@ -467,6 +467,7 @@ block content
     script(src='push.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js')
     script(type='text/javascript').
+      $(document).ready(function() {
       Push.Permission.request();
       document.getElementById('demoButton').onclick = function() {
       Push.create('Hello world!', {
@@ -481,4 +482,5 @@ block content
       vibrate: [200, 100, 200, 100, 200, 100, 200]
       });
       };
+      });
 
