@@ -4,7 +4,7 @@ block content
   h1= title
   p Welcome to #{title}
 
-//-
+
     meta(charset='utf-8')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
     link(href='https://www.awaionline.net/_css/normalize.css', rel='stylesheet')
@@ -466,11 +466,21 @@ block content
       a#demoButton(href='javascript:void(0);') Prueba Push
     script(src='https://code.jquery.com/jquery-1.12.0.min.js')
     script.
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\\/script>')
-    script(src='https://nickersoft.github.io/push.js/push.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js')
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    script(src='js/vendor/push.min.js')
     script(type='text/javascript').
       $(document).ready(function() {
+      Push.create('Hello world!', {
+      body: 'How\'s it hangin\'?',
+      icon: 'icon.png',
+      timeout: 4000,
+      onClick: function() {
+      console.log("Fired!");
+      window.focus();
+      this.close();
+      },
+      vibrate: [200, 100, 200, 100, 200, 100, 200]
+      });
       Push.Permission.request();
       document.getElementById('demoButton').onclick = function() {
       Push.create('Hello world!', {
