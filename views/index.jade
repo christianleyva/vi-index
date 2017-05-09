@@ -10,8 +10,8 @@ block content
   script(src='javascripts/push.js')
   script(type='text/javascript').
       $(document).ready(function() {
-      Push.create('Hello world!', {
-      body: 'How\'s it hangin\'?',
+      Push.create('Vilop Creative', {
+      body: 'Welcome to Vilop Creative',
       icon: 'images/icon.png',
       timeout: 4000,
       onClick: function() {
@@ -23,9 +23,9 @@ block content
       });
       Push.Permission.request();
       document.getElementById('demoButton').onclick = function() {
-      Push.create('Hello world!', {
-      body: 'How\'s it hangin\'?',
-      icon: 'icon.png',
+      Push.create('Vilop Creative', {
+      body: 'Welcome to Vilop Creative',
+      icon: 'images/icon.png',
       timeout: 4000,
       onClick: function() {
       console.log("Fired!");
