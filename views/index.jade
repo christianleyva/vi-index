@@ -34,18 +34,6 @@ block content
       vibrate: [200, 100, 200, 100, 200, 100, 200]
       });
       Push.Permission.request();
-      document.getElementById('demoButton').onclick = function() {
-      Push.create('Vilop Creative', {
-      body: 'Welcome to Vilop Creative',
-      icon: 'images/icon.png',
-      timeout: 4000,
-      onClick: function() {
-      console.log("Fired!");
-      window.focus();
-      this.close();
-      },
-      vibrate: [200, 100, 200, 100, 200, 100, 200]
-      });
-      };
+      
       });
 
